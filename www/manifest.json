@@ -1,0 +1,23 @@
+{
+  "name": "xtfm",
+  "xwalk_version": "0.0.2",
+  "start_url": "index.html",
+  "icons": [
+    {
+      "src": "img/icon.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "density": "4.0"
+    }
+  ],
+  "xwalk_launch_screen": {
+    "ready_when": "custom",
+    "portrait": {
+      "background_color": "#ff0000",
+      "image": "img/icon.png 1x, img/icon.png 2x",
+      "image_border": "30px 40px stretch"
+    }
+  }
+}
+
+

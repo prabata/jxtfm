@@ -1,0 +1,50 @@
+
+body {
+	    background: url("../img/logo320x180.png");
+	    background-size: 300px 300px;
+		//background-size:auto;
+	    background-repeat: no-repeat;
+	    background-position: center top;
+	}
+
+@media only screen and (max-width: 480px) {
+	body {
+	    background: url("../img/logo320x180.png");
+	    background-size:auto 420px;
+		//background-size:auto;
+	    background-repeat: no-repeat;
+	    background-position: center top;
+	}
+}
+@media only screen and (max-device-width: 480px) {
+	body {
+	    background: url("../img/logo320x180.png");
+	    background-size:auto 420px;
+		//background-size:auto;
+	    background-repeat: no-repeat;
+	    background-position: center top;
+	}
+}
+
+
+div#mp3_player{ 
+width:300px;
+ height:60px; 
+ background:#A0522D; 
+ padding:5px;
+
+ position:fixed;
+ right:50px;
+ bottom:50px;
+}
+
+div#mp3_player > div > audio{ width:300px; background:#000; float:right; }
+div#mp3_player > canvas{ width:300px; height:30px;background:#F5F5DC; float:right; }
+
+#audiodiv{
+
+    position:fixed;
+    bottom:20px;
+    left:20px;
+
+}

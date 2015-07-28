@@ -1,0 +1,233 @@
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#1A1A1A;
+    
+    background-image:linear-gradient(top, #000 10%, #1A1A1A 51%);
+    background-image:-webkit-linear-gradient(top, #000 10%, #1A1A1A 51%);
+    background-image:-ms-linear-gradient(top, #000 10%, #1A1A1A 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #1A1A1A)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+#app {
+    background:url(../img/logo480.png) no-repeat center top; 
+    position:fixed;     
+    height:400px;                   
+    width:400px;                
+    text-align:center;        
+    left:50%;
+    top:50%;
+    /*margin-top:-50%;  
+    margin-right: -50%;
+    margin-left:-200px;  */
+    -webkit-transform: translate(-50%,-50%); 
+    z-index: -1;
+}
+
+#credit{
+    text-align:center;
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.1; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.1; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 1000ms infinite;
+    -webkit-animation:fade 1000ms infinite;
+}
+
+
+
+#player{
+    display:none;
+}
+#logdiv{
+   position:fixed;
+    bottom:1px;
+    left:1px;
+}
+#errordiv{
+   position:fixed;
+    bottom:1px;
+    right:1px;
+}
+#errortext{
+    font-size: 10px;
+    color: #aa0000;
+}
+#logtext{
+    font-size: 10px;
+    color: #dddddd;
+}
+
+.horizontalmenu{
+    display:inline;
+}
+#exitmenu{
+    position:relative;
+    bottom:10px;
+    right:10px;
+}
+#playpausebutdiv{
+    position:fixed;
+    top:10px;
+    left:10px;
+    display:none;
+}
+#mutebutdiv{
+    position:fixed;
+    top:30px;
+    right:10px;
+}
+#loadingdiv{
+    position:fixed;
+    
+    left:20px;
+    top:30px;
+    
+    
+
+}
+#loadingico{
+    display: none;
+}
+
+#loadingimg{
+    height: 100px;
+    width: 100px
+
+}
+#nav{
+    position:fixed;
+   width:100%;
+   bottom: 10px;
+    left: 50%;
+  
+    -webkit-transform: translate(-50%,-10px);
+    z-index:999999;
+}
+#navlist{
+    position:relative;
+    display: inline;
+   
+}
+.navbut{
+   /* display: inline;*/
+    height: 75px;
+    width: 75px;
+
+}
+
+#playpausebut,
+#mutebut{
+    height: 90px;
+    width: 90px;
+}
+
+
+.toggle{
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+    
+}
+
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+
+    .navbut{
+
+    height: 50px;
+    width: 50px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .navbut{
+    height: 40px;
+    width: 40px;
+    }
+
+    #app {
+    background:url(../img/logo360.png) no-repeat center top;
+    height:400px;                   
+    width:400px;                
+    text-align:center;        
+    left:50%;
+    top:50%;
+    -webkit-transform:translate(-50%,-50%);      
+    z-index: -1;
+    }
+}
+
+
+
+#req{
+    position:fixed;
+    top:10;
+    left:10
+
+
+}
+
+
